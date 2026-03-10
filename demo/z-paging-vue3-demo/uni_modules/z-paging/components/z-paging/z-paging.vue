@@ -14,7 +14,18 @@ v2.8.8 (2025-08-29)
 
 <template name="z-paging">
 	<!-- #ifndef APP-NVUE -->
-	<view :class="[{'z-paging-content':true,'z-paging-content-full':!usePageScroll,'z-paging-content-fixed':!usePageScroll&&fixed,'z-paging-content-page':usePageScroll,'z-paging-reached-top':renderPropScrollTop<1,'z-paging-use-chat-record-mode':useChatRecordMode}, pagingClass]" :style="[finalPagingStyle]">
+	<view 
+		:class="[
+			'z-paging-content',
+			!usePageScroll && 'z-paging-content-full',
+			!usePageScroll && fixed && 'z-paging-content-fixed',
+			usePageScroll && 'z-paging-content-page',
+			renderPropScrollTop < 1 && 'z-paging-reached-top',
+			useChatRecordMode && 'z-paging-use-chat-record-mode',
+			pagingClass
+		]"
+		:style="[finalPagingStyle]"
+	>
 		<!-- #ifndef APP-PLUS -->
 		<view v-if="cssSafeAreaInsetBottom===-1" class="zp-safe-area-inset-bottom" style="position: absolute"/>
 		<!-- #endif -->
