@@ -179,7 +179,7 @@
 		}, {
 			"path": "pages/virtual-list-demo/virtual-list-demo",
 			"style": {
-				"navigationBarTitleText": "虚拟列表演示(一般写法)",
+				"navigationBarTitleText": "虚拟列表演示(内置列表写法)",
 				"enablePullDownRefresh": false
 			}
 
@@ -287,7 +287,13 @@
 			"path" : "pages/virtual-list-sticky-demo/virtual-list-sticky-demo",
 			"style" : 
 			{
-				"navigationBarTitleText" : "虚拟列表+吸顶演示(一般写法)"
+				"navigationBarTitleText" : "虚拟列表+吸顶演示(内置列表写法)"
+			}
+		},
+		{
+			"path": "pages/virtual-list-waterfall-demo/virtual-list-waterfall-demo",
+			"style": {
+				"navigationBarTitleText": "虚拟列表+高度相同瀑布流演示(内置列表写法)"
 			}
 		}
 	],

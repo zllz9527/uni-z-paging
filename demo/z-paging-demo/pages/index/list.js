@@ -45,7 +45,7 @@ export default {
 			subTitle: ''
 		},
 		{
-			title: '虚拟列表演示(一般写法)',
+			title: '虚拟列表演示(内置列表写法)',
 			file: 'virtual-list-demo',
 			subTitle: '写法简单，通过slot=cell插入所需cell，页面中无直接的for循环，在vue2中兼容性良好'
 		},
@@ -60,8 +60,13 @@ export default {
 			subTitle: '写法麻烦，而且需要手动修改`z-paging`源码，所有渲染cell写在相同组件内，不易维护，在vue2中兼容性很好，但非必须不建议使用'
 		},
 		{
-			title: '虚拟列表+吸顶演示(一般写法)',
+			title: '虚拟列表+吸顶演示(内置列表写法)',
 			file: 'virtual-list-sticky-demo',
+			subTitle: ''
+		},
+		{
+			title: '虚拟列表+高度相同瀑布流演示(内置列表写法)',
+			file: 'virtual-list-waterfall-demo',
 			subTitle: ''
 		},
 		{
