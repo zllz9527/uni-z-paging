@@ -222,8 +222,12 @@ export default {
 		didUpdateVirtualListCell(index) {
 			if (this.cellHeightMode !== Enum.CellHeightMode.Dynamic) return;
 			const currentNode = this.virtualHeightCacheList[index];
+			if (!currentNode) return;
+			const currentItem = this.realTotalData[index];
+			const cellIndexKey = this.virtualCellIndexKey;
+			const cellIndex = currentItem && currentItem[cellIndexKey] !== undefined ? currentItem[cellIndexKey] : index;
 			this.$nextTick(() => {
-				this._getVirtualCellNodeByIndex(index).then(cellNode => {
+				this._getVirtualCellNodeByIndex(cellIndex).then(cellNode => {
 					// 更新当前cell的高度
 					const cellNodeHeight = cellNode ? cellNode[0].height : 0;
 					const heightDis = cellNodeHeight - currentNode.height;
